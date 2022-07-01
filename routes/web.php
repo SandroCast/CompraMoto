@@ -15,8 +15,11 @@ use App\Http\Controllers\FileController;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('files.index');
-});
+Route::get('/', [FileController::class, 'index']);
 
-Route::resource('files',FileController::class);
+Route::get('/historico', [FileController::class, 'historico']);
+
+Route::get('/administrador/AmAtOrY/sandrocastro', [FileController::class, 'administrador']);
+Route::get('/administrador/AmAtOrY/sandrocastro/novo', [FileController::class, 'novo']);
+Route::get('/administrador/AmAtOrY/sandrocastro/pagamentos', [FileController::class, 'pagamentos']);
+Route::post('/administrador/AmAtOrY/sandrocastro/novo/salvar', [FileController::class, 'salvar']);
