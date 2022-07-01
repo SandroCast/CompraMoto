@@ -54,6 +54,7 @@ class CompraController extends Controller
 
     }
 
+    
 
     public function pagamentos()
     {
