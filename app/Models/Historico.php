@@ -9,7 +9,7 @@ class Historico extends Model
 {
     use HasFactory;
 
-    protected $table = 'historico';
+    protected $table = 'historicos';
 
     
 }

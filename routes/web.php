@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\CompraController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,11 @@ use App\Http\Controllers\FileController;
 |
 */
 
-Route::get('/', [FileController::class, 'index']);
+Route::get('/', [CompraController::class, 'index']);
 
-Route::get('/historico', [FileController::class, 'historico']);
+Route::get('/historico', [CompraController::class, 'historico']);
 
-Route::get('/administrador/AmAtOrY/sandrocastro', [FileController::class, 'administrador']);
-Route::get('/administrador/AmAtOrY/sandrocastro/novo', [FileController::class, 'novo']);
-Route::get('/administrador/AmAtOrY/sandrocastro/pagamentos', [FileController::class, 'pagamentos']);
-Route::post('/administrador/AmAtOrY/sandrocastro/novo/salvar', [FileController::class, 'salvar']);
+Route::get('/administrador/AmAtOrY/sandrocastro', [CompraController::class, 'administrador']);
+Route::get('/administrador/AmAtOrY/sandrocastro/novo', [CompraController::class, 'novo']);
+Route::get('/administrador/AmAtOrY/sandrocastro/pagamentos', [CompraController::class, 'pagamentos']);
+Route::post('/administrador/AmAtOrY/sandrocastro/novo/salvar', [CompraController::class, 'salvar']);
